@@ -15,10 +15,12 @@ import re
 
 class BDTB:
 
+    # 初始化一些变量
     def __init__(self,baseUrl,seeLZ):
         self.baseUrl = baseUrl
         self.seeLZ = '?see_lz=' + str(seeLZ)
 
+    # 利用urllib2 库获取页面代码
     def getPage(self,pageNum):
         try:
             url = self.baseUrl + self.seeLZ + '&pn' + str(pageNum)
